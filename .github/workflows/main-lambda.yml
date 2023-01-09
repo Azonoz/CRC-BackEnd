@@ -22,7 +22,7 @@ jobs:
         run: |
           zip -r function.zip ./lambda/count.py
       - name: Deploy to Lambda
-        uses: embeddedinn/deploy_lambda@v1.0.0
+        uses: appleboy/lambda-action@master
         with:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
