@@ -20,7 +20,7 @@ jobs:
           pip install awscli
       - name: Package code
         run: |
-          zip -r function.zip ./lambda/count.py
+          zip -r function.zip lambda_function.py
       - name: Deploy to Lambda
         uses: embeddedinn/deploy_lambda@v1.0.0
         with:
